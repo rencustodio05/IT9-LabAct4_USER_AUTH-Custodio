@@ -1,8 +1,30 @@
-<form method="POST" action="/register">
-    @csrf
-    <input name="name" placeholder="Name" required>
-    <input name="email" type="email" placeholder="Email" required>
-    <input name="password" type="password" placeholder="Password" required>
-    <input name="password_confirmation" type="password" placeholder="Confirm Password" required>
-    <button type="submit">Register</button>
-</form>
+<link rel="stylesheet" href="/css/style.css">
+
+<div class="container" style="max-width: 400px; margin-top: 60px;">
+    <div class="form-card">
+        <form method="POST" action="/register">
+            @csrf
+            <h1 style="text-align:center; margin-bottom: 24px;">Register</h1>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input id="name" name="name" placeholder="Name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input id="password" name="password" type="password" placeholder="Password" required>
+            </div>
+            <div class="form-group">
+                <label for="password_confirmation">Confirm Password</label>
+                <input id="password_confirmation" name="password_confirmation" type="password" placeholder="Confirm Password" required>
+            </div>
+            <button type="submit" class="btn btn-blue" style="width:100%; margin-top: 10px;">Register</button>
+            <div style="text-align:center; margin-top: 14px;">
+                <a href="/login" style="color:#60a5fa; text-decoration:underline; background:none; border:none; font-size:14px; cursor:pointer;">Login</a>
+            </div>
+        </form>
+    </div>
+</div>
